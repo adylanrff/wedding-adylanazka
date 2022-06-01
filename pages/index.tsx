@@ -1,22 +1,56 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import Cover from '../components/Cover'
+import dynamic from 'next/dynamic'
+import { useState } from 'react'
+import { motion, AnimatePresence } from "framer-motion"
+
+const CoverPage = dynamic(() => import('../components/contents/CoverPage'))
+const MainPage = dynamic(() => import('../components/contents/MainPage'))
 
 const Home: NextPage = () => {
+  const [isInvitationOpened, setIsInvitationOpened] = useState(false)
+
+  const onInvitationOpen = (): void => {
+    setIsInvitationOpened(true)
+  }
+
   return (
-    <div className="flex min-h-screen bg-background flex-col items-center justify-center py-2">
+    <div className="min-h-screen relative items-center justify-center">
       <Head>
-        <title>Create Next App</title>
+        <title>Adylan & Azka Wedding</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* Cover component */}
-      <Cover />
+      {/* Cover page */}
+      <AnimatePresence>
+        {!isInvitationOpened && (
+          <motion.div
+            exit="hidden"
+            transition={{ duration: 0.75 }}
+            animate={isInvitationOpened ? 'hidden' : 'visible'}
+            variants={coverPageVariants}
+            className="absolute inset-0 z-10"
+          >
+            <CoverPage onInvitationOpen={onInvitationOpen} />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      {/* Content component */}
+      {/* Main Page */}
+      <MainPage />
+
     </div>
   )
 }
 
 export default Home
+
+const coverPageVariants = {
+  hidden: {  y: '-120vh' },
+  visible: { y: '0' },
+}
+
+const mainPageVariants = {
+  hidden: {  y: '100vh' },
+  visible: { y: '0' },
+}

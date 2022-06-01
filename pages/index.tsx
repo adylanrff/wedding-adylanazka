@@ -9,6 +9,11 @@ const MainPage = dynamic(() => import('../components/contents/MainPage'))
 
 const Home: NextPage = () => {
   const [isInvitationOpened, setIsInvitationOpened] = useState(false)
+  
+  const coverPageVariants = {
+    hidden: {  y: '-120vh' },
+    visible: { y: '0' },
+  }
 
   const onInvitationOpen = (): void => {
     setIsInvitationOpened(true)
@@ -44,13 +49,3 @@ const Home: NextPage = () => {
 }
 
 export default Home
-
-const coverPageVariants = {
-  hidden: {  y: '-120vh' },
-  visible: { y: '0' },
-}
-
-const mainPageVariants = {
-  hidden: {  y: '100vh' },
-  visible: { y: '0' },
-}

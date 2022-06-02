@@ -5,7 +5,7 @@ type Props = {}
 
 function MainPage({}: Props) {
   return (
-    <div className='flex justify-center align-center w-screen h-screen'>
+    <div className='flex justify-center w-screen h-screen'>
         <div className='my-8'>
           <MainSection />
         </div>

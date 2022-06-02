@@ -3,20 +3,23 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion"
+import useScrollLock from '../hooks/useScrollLock'
 
 const CoverPage = dynamic(() => import('../components/contents/CoverPage'))
 const MainPage = dynamic(() => import('../components/contents/MainPage'))
 
+const coverPageVariants = {
+  hidden: {  y: '-120vh' },
+  visible: { y: '0' },
+}
+
 const Home: NextPage = () => {
   const [isInvitationOpened, setIsInvitationOpened] = useState(false)
-  
-  const coverPageVariants = {
-    hidden: {  y: '-120vh' },
-    visible: { y: '0' },
-  }
+  const [_, setIsScrollLocked] = useScrollLock(!isInvitationOpened)
 
   const onInvitationOpen = (): void => {
     setIsInvitationOpened(true)
+    setIsScrollLocked(false)
   }
 
   return (

@@ -14,7 +14,6 @@ export default function MainSection({ }: Props): ReactElement {
             <div className=''>
                 <QuranVerse />
             </div>
-
         </div>
 
     )

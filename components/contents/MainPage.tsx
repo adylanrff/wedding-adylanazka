@@ -1,6 +1,6 @@
 import React from 'react'
-import GroomAndBrideSection from '../sections/GroomAndBrideSection'
-import MainSection from '../sections/MainSection'
+import GroomAndBrideSection from './sections/GroomAndBrideSection'
+import MainSection from './sections/MainSection'
 
 type Props = {}
 

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
-import CoupleGeneralInfo from '../CoupleGeneralInfo'
-import QuranVerse from '../QuranVerse'
+import CoupleGeneralInfo from '../../CoupleGeneralInfo'
+import QuranVerse from '../../QuranVerse'
 
 interface Props {
 }
@@ -11,9 +11,7 @@ export default function MainSection({ }: Props): ReactElement {
             <div className="mt-10">
                 <CoupleGeneralInfo imageSrc="https://via.placeholder.com/356x356?text=Photo+Adylan+Azka" />
             </div>
-            <div>
-                <QuranVerse />
-            </div>
+            <QuranVerse />
         </div>
 
     )

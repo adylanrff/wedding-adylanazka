@@ -4,7 +4,9 @@ type Props = {}
 
 function WeddingEventInfo({}: Props) {
   return (
-    <div>WeddingEventInfo</div>
+    <div className='card card-normal bg-title shadow-sm shadow-black'>
+        <p>Wedding Event Info</p>
+    </div>
   )
 }
 

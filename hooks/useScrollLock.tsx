@@ -16,6 +16,7 @@ export default function useScrollLock(shouldLock: Boolean): [Boolean, Dispatch<S
             document.body.style.overflow = ''; /* [2] */
 
             document.documentElement.style.overflowX = 'hidden'
+            document.documentElement.style.overflowY = 'hidden'
             document.body.style.overflowX = 'hidden'
           }
     }, [isScrollLocked])

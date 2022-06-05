@@ -13,7 +13,11 @@ module.exports = {
         'background': '#E4D3CF',
         'title': '#B67162',
         'body': '#464646',
-      }
+      },
+      flex: {
+        '2': '2 2 0%',
+        '3': '3 3 0%'
+      },
     },
   },
   plugins: [require("daisyui")],
@@ -24,7 +28,7 @@ module.exports = {
         default: {
           primary: "#B67162",
           secondary: "#999B84",
-          accent: "#999B84",
+          accent: "#B67162",
           neutral: "#ffffff",
           "base-100": "#ffffff",
 

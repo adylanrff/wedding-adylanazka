@@ -11,7 +11,9 @@ export default function MainSection({ }: Props): ReactElement {
             <div className="mt-10">
                 <CoupleGeneralInfo imageSrc="https://via.placeholder.com/356x356?text=Photo+Adylan+Azka" />
             </div>
-            <QuranVerse />
+            <div>
+                <QuranVerse />
+            </div>
         </div>
 
     )

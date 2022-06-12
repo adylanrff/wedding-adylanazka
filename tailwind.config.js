@@ -13,6 +13,7 @@ module.exports = {
         'background': '#E4D3CF',
         'title': '#B67162',
         'body': '#464646',
+        'card': 'rgba(216, 172, 156, 0.5)',
       },
       flex: {
         '2': '2 2 0%',

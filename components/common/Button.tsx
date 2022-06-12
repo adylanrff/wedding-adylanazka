@@ -2,15 +2,18 @@ import React from 'react'
 
 type Props = {
     text?: string
+    small?: boolean
     onClick?: () => void
 }
 
-export default function Button({text, onClick}: Props) {
-  return (
-    <button 
-        onClick={onClick} 
-        className="btn btn-primary btn-md sm:btn-lg sm:btn-wide text-white">
+export default function Button({ text, small, onClick }: Props) {
+    const btnSizeClassName = small ? 'btn-sm sm:btn-md' : 'btn-md sm:btn-lg'
+
+    return (
+        <button
+            onClick={onClick}
+            className={`btn btn-primary ${btnSizeClassName} sm:p-0 px-6 sm:btn-wide text-white`}>
             {text}
-    </button>
-)
+        </button>
+    )
 }

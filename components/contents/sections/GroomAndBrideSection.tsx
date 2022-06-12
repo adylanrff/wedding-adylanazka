@@ -1,5 +1,6 @@
 import React from 'react'
 import useGroomAndBrideData from '../../../hooks/useGroomAndBrideData'
+import useWeddingInfoData from '../../../hooks/useWeddingInfoData'
 import GroomAndBrideInfo from '../../GroomAndBrideInfo'
 import SectionTitle from '../../SectionTitle'
 import WeddingEventInfo from '../../WeddingEventInfo'
@@ -7,7 +8,8 @@ import WeddingEventInfo from '../../WeddingEventInfo'
 type Props = {}
 
 function GroomAndBrideSection({ }: Props) {
-    const [groomAndBrideData, _] = useGroomAndBrideData()
+    const [groomAndBrideData] = useGroomAndBrideData()
+    const [weddingInfo] = useWeddingInfoData()
 
     const { groom, bride } = groomAndBrideData
 
@@ -32,8 +34,8 @@ function GroomAndBrideSection({ }: Props) {
             </div>
 
             {/* WeddingEventInfo */}
-            <div className='mx-4'>
-                <WeddingEventInfo />
+            <div className='mx-4 w-11/12 sm:w-2/3 self-center'>
+                <WeddingEventInfo weddingInfo={weddingInfo}/>
             </div>
         </div>
     )

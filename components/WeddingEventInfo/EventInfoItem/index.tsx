@@ -20,7 +20,7 @@ function EventInfoItem({ imgSrc, title, content, children }: Props) {
       <p className='font-title font-bold text-xl sm:text-4xl'>{title}</p>
       <div className='flex flex-col items-center'>
         {splittedContent?.map((line) => (
-          <p className='text-xs sm:text-base leading-tight'>{line}</p>
+          <p key={line} className='text-xs sm:text-base leading-tight'>{line}</p>
         ))}
       </div>
 

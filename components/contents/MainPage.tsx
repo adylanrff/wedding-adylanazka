@@ -1,18 +1,18 @@
 import React from 'react'
 import GroomAndBrideSection from './sections/GroomAndBrideSection'
 import MainSection from './sections/MainSection'
+import SaveTheDateSection from './sections/SaveTheDateSection'
 
 type Props = {}
 
 function MainPage({}: Props) {
   return (
-    <div className='justify-center overflow-x-hidden w-screen h-screen overflow-auto'>
-        <div className='my-8'>
+    <div className="h-screen w-screen justify-center overflow-auto overflow-x-hidden">
+      <div className='flex flex-col gap-24 pb-12'>
           <MainSection />
-        </div>
-        <div className='my-8'>
           <GroomAndBrideSection />
-        </div>
+          <SaveTheDateSection />
+      </div>
     </div>
   )
 }

@@ -22,7 +22,8 @@ export default function useWeddingInfoData(): [WeddingInfoData, Dispatch<SetStat
             `,
             latitude: 0,
             longitude: 0
-        }
+        },
+        addToCalendarUrl: "https://calendar.google.com/event?action=TEMPLATE&tmeid=NTd2YWcybWpzMHZhdTJydDhjMHY3ZnVobDQgYWR5bGFucmZmQG0&tmsrc=adylanrff%40gmail.com",
     }
 
     const [data, setData] = useState(defaultData);

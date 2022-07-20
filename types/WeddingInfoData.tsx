@@ -14,4 +14,5 @@ export type WeddingInfoData = {
     akadSchedule: ScheduleData
     resepsiSchedule: ScheduleData
     location: LocationData
+    addToCalendarUrl: string
 }

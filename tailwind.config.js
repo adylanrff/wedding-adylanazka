@@ -11,6 +11,8 @@ module.exports = {
     extend: {
       colors: {
         'background': '#E4D3CF',
+        'background-light': '#F4EEED',
+        'accent': 'rgba(153, 155, 132, 0.5)',
         'title': '#B67162',
         'body': '#464646',
         'card': 'rgba(216, 172, 156, 0.5)',

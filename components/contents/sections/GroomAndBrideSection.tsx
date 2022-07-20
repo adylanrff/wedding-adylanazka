@@ -28,11 +28,6 @@ function GroomAndBrideSection({ }: Props) {
             {/* Groom and Bride Info */}
             <GroomAndBrideInfo groomData={groom} brideData={bride} />
 
-            {/* Divider */}
-            <div className='self-center sm:block hidden'>
-                <img src='/flower-1.svg' className='sm:w-52 sm:h-52 w-36 h-36' />
-            </div>
-
             {/* WeddingEventInfo */}
             <div className='mx-4 w-11/12 sm:w-2/3 self-center'>
                 <WeddingEventInfo weddingInfo={weddingInfo}/>

@@ -1,6 +1,7 @@
 import React from 'react'
 import GroomAndBrideSection from './sections/GroomAndBrideSection'
 import MainSection from './sections/MainSection'
+import RSVPSection from './sections/RSVPSection'
 import SaveTheDateSection from './sections/SaveTheDateSection'
 
 type Props = {}
@@ -12,6 +13,7 @@ function MainPage({}: Props) {
           <MainSection />
           <GroomAndBrideSection />
           <SaveTheDateSection />
+          <RSVPSection />
       </div>
     </div>
   )
